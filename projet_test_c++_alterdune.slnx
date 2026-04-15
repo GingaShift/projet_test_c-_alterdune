@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="projet_test_c++_alterdune/projet_test_c++_alterdune.vcxproj" Id="2d9e3e09-c315-40d8-8068-b8cb5d1e139e" />
+</Solution>

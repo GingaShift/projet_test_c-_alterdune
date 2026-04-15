@@ -1,0 +1,9 @@
+name;type;value;quantity
+Potion;HEAL;30;3
+Super Potion;HEAL;60;1
+Tarte Maison;HEAL;100;1
+Biscuit;HEAL;15;4
+Chocolat Chaud;HEAL;45;2
+Spaghetti;HEAL;80;1
+Oeuf Frit;HEAL;25;2
+Bandage;HEAL;20;3
