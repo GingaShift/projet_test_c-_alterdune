@@ -1,0 +1,87 @@
+entity Player {
+  +id : int <<PK>>
+  name : string
+  hp : int
+  maxHp : int
+  atk : int
+  def : int
+  gold : int
+  kills : int
+  spared : int
+  victories : int
+}
+
+entity Monster {
+  +id : int <<PK>>
+  name : string
+  hp : int
+  maxHp : int
+  atk : int
+  def : int
+  category : string
+  mercyThreshold : int
+}
+
+entity Item {
+  +id : int <<PK>>
+  name : string
+  type : string
+  value : int
+}
+
+entity Player_Item {
+  +player_id : int <<FK>>
+  +item_id : int <<FK>>
+  quantity : int
+}
+
+entity Act {
+  +id : int <<PK>>
+  description : string
+  mercyImpact : int
+}
+
+entity Monster_Act {
+  +monster_id : int <<FK>>
+  +act_id : int <<FK>>
+}
+
+entity Bestiary_Entry {
+  +id : int <<PK>>
+  monster_id : int <<FK>>
+  category : string
+  hpMax : int
+  atk : int
+  def : int
+  result : string
+}
+
+entity Game_State {
+  +id : int <<PK>>
+  player_id : int <<FK>>
+  victories : int
+  kills : int
+  spared : int
+  isRunning : bool
+  isGenocideRoute : bool
+}
+
+entity Combat {
+  +id : int <<PK>>
+  player_id : int <<FK>>
+  monster_id : int <<FK>>
+  result : string
+}
+
+Player ||--o{ Player_Item
+Item ||--o{ Player_Item
+
+Monster ||--o{ Monster_Act
+Act ||--o{ Monster_Act
+
+Monster ||--o{ Bestiary_Entry
+
+Player ||--|| Game_State
+
+Player ||--o{ Combat
+Monster ||--o{ Combat
