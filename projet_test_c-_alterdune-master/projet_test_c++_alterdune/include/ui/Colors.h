@@ -1,0 +1,26 @@
+#pragma once
+#include <string>
+
+namespace Colors {
+
+    const std::string RESET = "\033[0m";
+
+    const std::string BOLD = "\033[1m";
+    const std::string DIM = "\033[2m";
+
+    const std::string RED = "\033[31m";  // Dégâts, danger
+    const std::string GREEN = "\033[32m";  // Soins, succès
+    const std::string YELLOW = "\033[33m";  // MERCY, avertissement
+    const std::string BLUE = "\033[34m";  // Info, dialogue
+    const std::string MAGENTA = "\033[35m";  // Titres, spécial
+    const std::string CYAN = "\033[36m";  // Stats, interface
+    const std::string WHITE = "\033[37m";  // Texte normal
+
+    const std::string BRIGHT_RED = "\033[91m";
+    const std::string BRIGHT_GREEN = "\033[92m";
+    const std::string BRIGHT_YELLOW = "\033[93m";
+    const std::string BRIGHT_BLUE = "\033[94m";
+    const std::string BRIGHT_MAGENTA = "\033[95m";
+    const std::string BRIGHT_CYAN = "\033[96m";
+    const std::string BRIGHT_WHITE = "\033[97m";
+}
