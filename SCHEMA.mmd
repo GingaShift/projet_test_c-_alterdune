@@ -1,0 +1,91 @@
+Class Diagram
+{
+  Class Game
+  {
+      id : int PK
+  }
+
+  Class Player
+  {
+      id : int PK
+      name : string
+      hp : int
+      maxHp : int
+      atk : int
+      def : int
+      gold : int
+      kills : int
+      spared : int
+      victories : int
+  }
+
+  Class Monster
+  {
+      id : int PK
+      name : string
+      hp : int
+      maxHp : int
+      atk : int
+      def : int
+      category : string
+      mercyThreshold : int
+  }
+
+  Class Item
+  {
+      id : int PK
+      name : string
+      type : string
+      value : int
+  }
+
+  Class Player_Item
+  {
+      player_id : int FK
+      item_id : int FK
+      quantity : int
+  }
+
+  Class Act
+  {
+      id : int PK
+      description : string
+      mercyImpact : int
+  }
+
+  Class Monster_Act
+  {
+      monster_id : int FK
+      act_id : int FK
+  }
+
+  Class Bestiary_Entry
+  {
+      id : int PK
+      monster_id : int FK
+      category : string
+      hpMax : int
+      atk : int
+      def : int
+      result : string
+  }
+
+  Class Game_State
+  {
+      id : int PK
+      player_id : int FK
+      victories : int
+      kills : int
+      spared : int
+      isRunning : bool
+      isGenocideRoute : bool
+  }
+
+  Class Combat
+  {
+      id : int PK
+      player_id : int FK
+      monster_id : int FK
+      result : string
+  }
+}
